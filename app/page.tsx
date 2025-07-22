@@ -3,14 +3,27 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { useState, useEffect, useRef } from "react"
 import { ConeIcon as Crane, Truck, Settings, Clock, Shield, MapPin, Phone, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { bgvideo } from "../public/"
 import AnimatedLogo from "@/components/animated-logo"
 
 export default function HomePage() {
   const [hoveredService, setHoveredService] = useState<number | null>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    video.onended = () => {
+      video.pause()
+      video.currentTime = video.duration // freeze at last frame
+    }
+  }, [])
+
 
   const handleGetQuote = async () => {
     try {
@@ -64,17 +77,28 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-800/70 z-10" />
-        <Image
-          src="/placeholder.svg?height=1080&width=1920"
-          alt="Industrial crane in action"
-          fill
-          className="object-cover"
-          priority
-        />
+
+        {/* Background Video */}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/bg.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+
+        {/* Optional Logo Overlay */}
         <div className="absolute inset-0 z-5">
           <AnimatedLogo />
         </div>
+
+        {/* Content */}
         <div className="relative z-20 text-center text-white max-w-6xl mx-auto px-4">
           <Badge className="mb-6 bg-yellow-500 text-slate-900 text-lg px-6 py-2 font-bold animate-pulse">
             POWERING INDIA'S HEAVY MOVES
@@ -108,6 +132,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* Quick Service Tiles */}
       <section className="py-20 bg-slate-100">
@@ -161,15 +186,14 @@ export default function HomePage() {
               >
                 <CardContent className="p-8 text-center">
                   <div
-                    className={`w-20 h-20 ${
-                      service.color === "yellow"
-                        ? "bg-yellow-500"
-                        : service.color === "slate"
-                          ? "bg-slate-700"
-                          : service.color === "blue"
-                            ? "bg-blue-900"
-                            : "bg-red-600"
-                    } rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}
+                    className={`w-20 h-20 ${service.color === "yellow"
+                      ? "bg-yellow-500"
+                      : service.color === "slate"
+                        ? "bg-slate-700"
+                        : service.color === "blue"
+                          ? "bg-blue-900"
+                          : "bg-red-600"
+                      } rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}
                   >
                     <service.icon className="h-10 w-10 text-white" />
                   </div>
@@ -178,15 +202,14 @@ export default function HomePage() {
                   <Link href={service.link}>
                     <Button
                       variant="outline"
-                      className={`border-${
-                        service.color === "yellow"
-                          ? "yellow-500 text-yellow-600 hover:bg-yellow-500"
-                          : service.color === "slate"
-                            ? "slate-700 text-slate-700 hover:bg-slate-700"
-                            : service.color === "blue"
-                              ? "blue-900 text-blue-900 hover:bg-blue-900"
-                              : "red-600 text-red-600 hover:bg-red-600"
-                      } hover:text-white bg-transparent group-hover:shadow-lg transition-all duration-200`}
+                      className={`border-${service.color === "yellow"
+                        ? "yellow-500 text-yellow-600 hover:bg-yellow-500"
+                        : service.color === "slate"
+                          ? "slate-700 text-slate-700 hover:bg-slate-700"
+                          : service.color === "blue"
+                            ? "blue-900 text-blue-900 hover:bg-blue-900"
+                            : "red-600 text-red-600 hover:bg-red-600"
+                        } hover:text-white bg-transparent group-hover:shadow-lg transition-all duration-200`}
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -244,7 +267,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="https://vinaydurgacranes.in/wp-content/uploads/2021/11/hero-image-min.jpg"
                 alt="Industrial facility"
                 width={800}
                 height={600}

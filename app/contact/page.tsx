@@ -12,6 +12,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle } from "lucide-react"
 import Image from "next/image"
+import contact from "../../public/contact1.jpg";
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -84,8 +86,8 @@ export default function ContactPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-32 bg-slate-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-800/80" />
-        <Image src="/placeholder.svg?height=800&width=1920" alt="Contact hero" fill className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-800/70 z-10" />
+        <Image src={contact} alt="Contact hero" fill className="object-cover" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-yellow-500 text-slate-900 text-lg px-6 py-2 font-bold">CONTACT US</Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -352,16 +354,21 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="aspect-video bg-slate-200 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-slate-400 mx-auto mb-4" />
-                <p className="text-slate-600 text-lg">Interactive Map</p>
-                <p className="text-slate-500">123 Industrial Area, Sector 15, Gurgaon</p>
-              </div>
+            <div className="aspect-video">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.2646553189534!2d76.90409547414772!3d15.139393761937097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb7e857e9d9a4e7%3A0x88ad09bb312e02d5!2sBallari%2C%20Karnataka%20583001!5e0!3m2!1sen!2sin!4v1721628052857!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
+
     </div>
   )
 }

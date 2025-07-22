@@ -5,7 +5,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Phone, Mail } from "lucide-react"
-
+import Image from "next/image"
+import logo from "../public/svlp_logo3.png"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -44,11 +45,15 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-slate-900 font-bold text-xl">VL</span>
-              </div>
+              <Image
+                   src={logo}
+                  alt="Technical Director"
+                  width={100}
+                  height={150}
+                  className=" mt-5 mx-auto mb-10"
+                />
               <div>
-                <div className="text-xl font-bold text-slate-800">Vijaya Laxmi Logistics</div>
+                <div className="text-xl font-bold text-slate-800 mt-4">Sri Vijayalakshmi Logistics</div>
                 <div className="text-sm text-slate-600">Pvt. Ltd.</div>
               </div>
             </Link>

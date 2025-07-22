@@ -3,14 +3,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ConeIcon as Crane, Truck, Settings, Clock, Wrench, Shield } from "lucide-react"
 import Image from "next/image"
+import service from "../../public/service1.jpg";
+import svlp_logo from "../../public/svlp_logo2.png";
+
+
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-32 bg-slate-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-800/80" />
-        <Image src="/placeholder.svg?height=800&width=1920" alt="Industrial services" fill className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-800/70 z-10" />
+        <Image src={service} alt="Industrial services" fill className="object-cover" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-yellow-500 text-slate-900 text-lg px-6 py-2 font-bold">OUR SERVICES</Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -218,7 +222,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src={svlp_logo}
                 alt="Emergency services"
                 width={800}
                 height={600}

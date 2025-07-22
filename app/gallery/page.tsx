@@ -4,67 +4,79 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
-
+import gallery from "../../public/gallery1.jpg"
+import gallery1 from "../../public/gallery2.jpg"
+import gallery2 from "../../public/gallery3.jpg"
+import gallery3 from "../../public/gallery4.jpg"
+import gallery4 from "../../public/gallery5.jpg"
+import gallery5 from "../../public/gallery6.jpg"
 const galleryImages = [
   {
     id: 1,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
     alt: "Hydraulic crane operation",
     category: "cranes",
     title: "500T Hydraulic Crane - Power Plant Installation",
   },
   {
     id: 2,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
+    alt: "Heavy transport",
+    category: "transport",
+    title: "Multi-Axle Transport - Turbine Delivery",
+  },
+  {
+    id: 2,
+    src: gallery,
     alt: "Heavy transport",
     category: "transport",
     title: "Multi-Axle Transport - Turbine Delivery",
   },
   {
     id: 3,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
     alt: "Hardware warehouse",
     category: "hardware",
     title: "Industrial Parts Warehouse",
   },
   {
     id: 4,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
     alt: "Crawler crane",
     category: "cranes",
     title: "Crawler Crane - Bridge Construction",
   },
   {
     id: 5,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
     alt: "On-site operations",
     category: "onsite",
     title: "Certified Operators at Work",
   },
   {
     id: 6,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
     alt: "Flatbed transport",
     category: "transport",
     title: "Flatbed Loading Operation",
   },
   {
     id: 7,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
     alt: "Mobile crane",
     category: "cranes",
     title: "Mobile Crane - Urban Project",
   },
   {
     id: 8,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
     alt: "Mechanical parts",
     category: "hardware",
     title: "Precision Gears & Components",
   },
   {
     id: 9,
-    src: "/placeholder.svg?height=400&width=600",
+    src: gallery,
     alt: "Emergency operation",
     category: "onsite",
     title: "24/7 Emergency Response",
@@ -88,9 +100,9 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-32 bg-slate-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 to-slate-800/80" />
-        <Image src="/placeholder.svg?height=800&width=1920" alt="Gallery hero" fill className="object-cover" />
+      <section className="relative py-32 bg-slate-900 text-white overflow-hidden ">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-800/70 z-10" />
+        <Image src={gallery} alt="Gallery hero" fill className="object-cover" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-yellow-500 text-slate-900 text-lg px-6 py-2 font-bold">PROJECT GALLERY</Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
