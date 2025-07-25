@@ -10,6 +10,10 @@ import gallery2 from "../../public/gallery3.jpg"
 import gallery3 from "../../public/gallery4.jpg"
 import gallery4 from "../../public/gallery5.jpg"
 import gallery5 from "../../public/gallery6.jpg"
+
+import lorry1 from "../../public/lorry1.jpg"
+import lorry2 from "../../public/lorry3.jpg"
+
 const galleryImages = [
   {
     id: 1,
@@ -20,14 +24,14 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: gallery,
+    src: lorry1,
     alt: "Heavy transport",
     category: "transport",
     title: "Multi-Axle Transport - Turbine Delivery",
   },
   {
     id: 2,
-    src: gallery,
+    src: lorry2,
     alt: "Heavy transport",
     category: "transport",
     title: "Multi-Axle Transport - Turbine Delivery",
@@ -45,13 +49,6 @@ const galleryImages = [
     alt: "Crawler crane",
     category: "cranes",
     title: "Crawler Crane - Bridge Construction",
-  },
-  {
-    id: 5,
-    src: gallery,
-    alt: "On-site operations",
-    category: "onsite",
-    title: "Certified Operators at Work",
   },
   {
     id: 6,

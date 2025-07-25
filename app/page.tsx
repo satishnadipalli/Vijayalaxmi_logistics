@@ -105,7 +105,7 @@ export default function HomePage() {
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Cranes, Transport &<br />
-            <span className="text-yellow-400">Industrial Hardware</span>
+            <span className="text-yellow-400"> Rental services</span>
             <br />
             Under One Roof
           </h1>

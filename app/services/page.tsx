@@ -23,7 +23,7 @@ export default function ServicesPage() {
             <span className="text-yellow-400">Heavy Lifting Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto">
-            From crane rentals to transport services and industrial hardware - everything you need for successful heavy
+            From crane rentals to transport services and  Rental services - everything you need for successful heavy
             lifting operations.
           </p>
         </div>
@@ -158,7 +158,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Industrial Hardware */}
+      {/*  Rental services */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -168,7 +168,7 @@ export default function ServicesPage() {
                 Industrial Gears, Pumps & Machinery Parts
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Comprehensive inventory of industrial hardware parts from leading manufacturers. Quality components for
+                Comprehensive inventory of  Rental services parts from leading manufacturers. Quality components for
                 maintenance, repair, and new installations.
               </p>
 

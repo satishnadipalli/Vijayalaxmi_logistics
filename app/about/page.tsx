@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge"
 import { Award, Users, Target, Zap } from "lucide-react"
 import Image from "next/image"
 import about from "../../public/about1.jpg"
+import founder1 from "../../public/director1.jpg"
+import founder2 from "../../public/director2.jpg"
 
 export default function AboutPage() {
   return (
@@ -21,7 +23,7 @@ export default function AboutPage() {
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto">
             From humble beginnings to becoming India's most trusted name in crane rentals, transport services, and
-            industrial hardware distribution.
+             Rental services distribution.
           </p>
         </div>
       </section>
@@ -43,7 +45,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Today, we operate one of India's largest fleets of specialized heavy lifting equipment, transport
-                  vehicles, and maintain extensive inventory of industrial hardware parts. Our journey reflects India's
+                  vehicles, and maintain extensive inventory of  Rental services parts. Our journey reflects India's
                   own industrial transformation.
                 </p>
                 <p>
@@ -74,8 +76,8 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Vision */}
-      <section className="py-20 bg-slate-100">
-        <div className="container mx-auto px-4">
+      <section className="py-20  bg-slate-100">
+        <div className="container items-center mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-6 bg-blue-900 text-white text-sm px-4 py-2 font-bold">LEADERSHIP</Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
@@ -87,18 +89,18 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="flex items-center gap-10 mb-16">
             <Card className="text-center bg-white border-0 shadow-lg">
               <CardContent className="p-8">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src={founder1}
                   alt="Founder"
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
                 />
-                <h3 className="text-2xl font-bold text-slate-800 mb-2">Rajesh Kumar</h3>
-                <p className="text-yellow-600 font-semibold mb-4">Founder & Managing Director</p>
+                <h3 className="text-2xl font-bold text-slate-800 mb-2">Santhosh Kumar</h3>
+                <p className="text-yellow-600 font-semibold mb-4">Founder & Director</p>
                 <p className="text-slate-600">
                   Visionary leader with 25+ years in heavy machinery and logistics. Pioneered modern crane rental
                   practices in India.
@@ -109,35 +111,17 @@ export default function AboutPage() {
             <Card className="text-center bg-white border-0 shadow-lg">
               <CardContent className="p-8">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src={founder2}
                   alt="Operations Director"
                   width={200}
                   height={200}
                   className="rounded-full mx-auto mb-6"
                 />
-                <h3 className="text-2xl font-bold text-slate-800 mb-2">Priya Sharma</h3>
-                <p className="text-yellow-600 font-semibold mb-4">Operations Director</p>
+                <h3 className="text-2xl font-bold text-slate-800 mb-2">Hymavathi</h3>
+                <p className="text-yellow-600 font-semibold mb-4">Operations & Managing Director</p>
                 <p className="text-slate-600">
                   Expert in fleet management and safety protocols. Ensures operational excellence across all service
                   lines.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center bg-white border-0 shadow-lg">
-              <CardContent className="p-8">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Technical Director"
-                  width={200}
-                  height={200}
-                  className="rounded-full mx-auto mb-6"
-                />
-                <h3 className="text-2xl font-bold text-slate-800 mb-2">Amit Patel</h3>
-                <p className="text-yellow-600 font-semibold mb-4">Technical Director</p>
-                <p className="text-slate-600">
-                  Mechanical engineer specializing in heavy lifting solutions. Drives innovation in equipment and
-                  service delivery.
                 </p>
               </CardContent>
             </Card>
