@@ -39,7 +39,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-lg text-slate-600">
                 <p>
-                  Founded in 2000, Vijaya Laxmi Logistics Pvt. Ltd. began as a small crane rental service with a vision
+                  Founded in 2011, Vijaya Laxmi Logistics Pvt. Ltd. began as a small crane rental service with a vision
                   to support India's growing industrial sector. What started with a single hydraulic crane has evolved
                   into a comprehensive logistics powerhouse.
                 </p>
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 className="rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-yellow-500 text-slate-900 p-6 rounded-lg shadow-xl">
-                <div className="text-3xl font-bold">2000</div>
+                <div className="text-3xl font-bold">2011</div>
                 <div className="font-semibold">Founded</div>
               </div>
             </div>

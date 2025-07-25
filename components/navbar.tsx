@@ -26,11 +26,11 @@ export default function Navbar() {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
-              <span>+91-9876-543-210</span>
+              <span>+91 99160 63439</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
-              <span>info@vijayalaxmilogistics.com</span>
+              <span>svllogisticspvtltd@gmail.com</span>
             </div>
           </div>
           <div className="hidden md:block">

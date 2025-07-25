@@ -14,10 +14,16 @@ import gallery5 from "../../public/gallery6.jpg"
 import lorry1 from "../../public/lorry1.jpg"
 import lorry2 from "../../public/lorry3.jpg"
 
+import row1 from "../../public/row1.jpg";
+import row2 from "../../public/row2.jpg";
+
+
+import main1 from "../../public/main1.jpg";
+import main2 from "../../public/main2.jpg"
 const galleryImages = [
   {
     id: 1,
-    src: gallery,
+    src: main1,
     alt: "Hydraulic crane operation",
     category: "cranes",
     title: "500T Hydraulic Crane - Power Plant Installation",
@@ -38,9 +44,9 @@ const galleryImages = [
   },
   {
     id: 3,
-    src: gallery,
+    src: row1,
     alt: "Hardware warehouse",
-    category: "hardware",
+    category: "Our Vehicles",
     title: "Industrial Parts Warehouse",
   },
   {
@@ -52,31 +58,31 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: gallery,
+    src: main2,
     alt: "Flatbed transport",
-    category: "transport",
+    category: "cranes",
     title: "Flatbed Loading Operation",
   },
   {
     id: 7,
-    src: gallery,
+    src: "https://vinaydurgacranes.in/wp-content/uploads/2025/03/11-e1742982849378.jpg",
     alt: "Mobile crane",
     category: "cranes",
-    title: "Mobile Crane - Urban Project",
+    title: "Zoomilon 70 tons",
   },
   {
     id: 8,
-    src: gallery,
+    src: row2,
     alt: "Mechanical parts",
-    category: "hardware",
+    category: "Our Vehicles",
     title: "Precision Gears & Components",
   },
   {
     id: 9,
-    src: gallery,
-    alt: "Emergency operation",
+    src: "https://vinaydurgacranes.in/wp-content/uploads/2025/03/10-e1742982760255.jpg",
     category: "onsite",
-    title: "24/7 Emergency Response",
+    alt: "Mobile crane",
+    title: "Hydrulic Recovery van",
   },
 ]
 
@@ -84,7 +90,7 @@ const categories = [
   { id: "all", label: "All Projects", count: galleryImages.length },
   { id: "cranes", label: "Cranes", count: galleryImages.filter((img) => img.category === "cranes").length },
   { id: "transport", label: "Transport", count: galleryImages.filter((img) => img.category === "transport").length },
-  { id: "hardware", label: "Hardware", count: galleryImages.filter((img) => img.category === "hardware").length },
+  { id: "Our Vehicles", label: "Hardware", count: galleryImages.filter((img) => img.category === "hardware").length },
   { id: "onsite", label: "On Site", count: galleryImages.filter((img) => img.category === "onsite").length },
 ]
 
@@ -180,8 +186,8 @@ export default function GalleryPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "10K+", label: "Projects Completed" },
-              { number: "500+", label: "Heavy Lifts" },
+              { number: "200+", label: "Projects Completed" },
+              { number: "100+", label: "Heavy Lifts" },
               { number: "50+", label: "Cities Served" },
               { number: "100%", label: "Safety Record" },
             ].map((stat, index) => (

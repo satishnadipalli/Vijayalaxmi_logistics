@@ -71,15 +71,15 @@ export default function ContactPage() {
   }
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/919876543210?text=Hello, I need information about your services", "_blank")
+    window.open("https://wa.me/919916063439?text=Hello, I need information about your services", "_blank")
   }
 
   const handleCall = () => {
-    window.location.href = "tel:+919876543210"
+    window.location.href = "tel:+919916063439"
   }
 
   const handleEmail = () => {
-    window.location.href = "mailto:info@vijayalaxmilogistics.com"
+    window.location.href = "mailto:svllogisticspvtltd@gmail.com"
   }
 
   return (
@@ -183,7 +183,7 @@ export default function ContactPage() {
                           <SelectContent>
                             <SelectItem value="crane-rental">Crane Rental</SelectItem>
                             <SelectItem value="transport">Transport Services</SelectItem>
-                            <SelectItem value="hardware">Hardware Parts</SelectItem>
+                            <SelectItem value="hardware">Automobiles</SelectItem>
                             <SelectItem value="emergency">Emergency Lifts</SelectItem>
                             <SelectItem value="onsite">On-site Support</SelectItem>
                             <SelectItem value="consultation">General Consultation</SelectItem>
@@ -242,9 +242,9 @@ export default function ContactPage() {
                       <div>
                         <h3 className="text-xl font-bold text-slate-800 mb-2">Head Office</h3>
                         <p className="text-slate-600">
-                          123 Industrial Area, Sector 15
+                          27-3-211/3, Official Coloney, Srinagar, Gajuwaka.
                           <br />
-                          Gurgaon, Haryana - 122001
+                          Visakhapatnam - 533026, Andhra Pradesh
                           <br />
                           India
                         </p>
@@ -264,15 +264,15 @@ export default function ContactPage() {
                         <p className="text-slate-600">
                           Main:{" "}
                           <button onClick={handleCall} className="text-green-600 hover:underline font-semibold">
-                            +91-9876-543-210
+                            +91 99160 63439
                           </button>
                           <br />
-                          Emergency:{" "}
+                          {/* Emergency:{" "}
                           <button onClick={handleCall} className="text-red-600 hover:underline font-semibold">
                             +91-9876-543-211
                           </button>
                           <br />
-                          Sales: +91-9876-543-212
+                          Sales: +91-9876-543-212 */}
                         </p>
                       </div>
                     </div>
@@ -290,7 +290,7 @@ export default function ContactPage() {
                         <p className="text-slate-600">
                           General:{" "}
                           <button onClick={handleEmail} className="text-blue-600 hover:underline">
-                            info@vijayalaxmilogistics.com
+                            svllogisticspvtltd@gmail.com
                           </button>
                           <br />
                           Sales: sales@vijayalaxmilogistics.com

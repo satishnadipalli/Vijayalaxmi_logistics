@@ -1,6 +1,9 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MapPin, Phone, Mail, Clock, Facebook, Linkedin } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Facebook, Linkedin, Instagram } from "lucide-react"
+import logo from "../public/svlp_logo3.png"
+import Image from "next/image"
+
 
 export default function Footer() {
   return (
@@ -10,33 +13,40 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-slate-900 font-bold text-xl">VL</span>
-              </div>
+              {/* <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center"> */}
+                <Image
+                  src={logo}
+                  width={100}
+                  height={100}
+                  alt="No logo"
+                />
+              {/* </div> */}
               <div>
                 <div className="text-xl font-bold">Vijaya Laxmi Logistics</div>
                 <div className="text-sm text-gray-400">Pvt. Ltd.</div>
               </div>
             </div>
             <p className="text-gray-300 mb-6">
-              Lifting India's Progress Since 2000. Your trusted partner for heavy lifting, transport, and industrial
+              Lifting India's Progress Since 2011. Your trusted partner for Crane rentals ,heavy lifting, transport, and industrial
               solutions.
             </p>
             <div className="flex space-x-4">
+              <a href="https://www.instagram.com/srivijayalaxmi_logistics/">
               <Button
                 size="icon"
                 variant="outline"
                 className="border-gray-600 text-gray-300 hover:bg-yellow-500 hover:text-slate-900 bg-transparent"
               >
-                <Facebook className="h-4 w-4" />
+                <Instagram className="h-4 w-4" />
               </Button>
-              <Button
+              </a>
+              {/* <Button
                 size="icon"
                 variant="outline"
                 className="border-gray-600 text-gray-300 hover:bg-yellow-500 hover:text-slate-900 bg-transparent"
               >
                 <Linkedin className="h-4 w-4" />
-              </Button>
+              </Button> */}
             </div>
           </div>
 
@@ -73,7 +83,7 @@ export default function Footer() {
                 Transport Services
               </Link>
               <Link href="/services#hardware" className="block text-gray-300 hover:text-yellow-400 transition-colors">
-                Hardware Parts
+                Automobiles
               </Link>
               <Link href="/services#emergency" className="block text-gray-300 hover:text-yellow-400 transition-colors">
                 Emergency Lifts
@@ -91,18 +101,18 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-300">
-                  <p>123 Industrial Area,</p>
-                  <p>Sector 15, Gurgaon,</p>
-                  <p>Haryana - 122001</p>
+                  <p>27-3-211/3, Official Coloney, Srinagar, Gajuwaka.,</p>
+                  <p>Visakhapatnam - 533026, Andhra Pradesh</p>
+                  <p>India</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-yellow-400" />
-                <span className="text-gray-300">+91-9876-543-210</span>
+                <span className="text-gray-300">+91 99160 63439</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-yellow-400" />
-                <span className="text-gray-300">info@vijayalaxmilogistics.com</span>
+                <span className="text-gray-300">svllogisticspvtltd@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-yellow-400" />

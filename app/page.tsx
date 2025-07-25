@@ -37,6 +37,8 @@ export default function HomePage() {
         }),
       })
 
+
+      console.log(response.json())
       if (response.ok) {
         // Redirect to contact page for more details
         window.location.href = "/contact"
@@ -164,7 +166,7 @@ export default function HomePage() {
               {
                 id: 3,
                 icon: Settings,
-                title: "Hardware Parts",
+                title: "Automobiles",
                 description: "Industrial gears, pumps, fittings & machinery parts",
                 color: "blue",
                 link: "/services#hardware",
@@ -233,13 +235,13 @@ export default function HomePage() {
                 {[
                   {
                     icon: Shield,
-                    title: "20+ Years Experience",
+                    title: "15+ Years Experience",
                     description:
                       "Two decades of proven expertise in heavy lifting and logistics operations across India.",
                   },
                   {
                     icon: Crane,
-                    title: "500+ Fleet Size",
+                    title: "100+ Fleet Size",
                     description: "Extensive fleet of modern cranes, transport vehicles, and specialized equipment.",
                   },
                   {
@@ -283,9 +285,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "20+", label: "Years Experience" },
-              { number: "500+", label: "Fleet Vehicles" },
-              { number: "10K+", label: "Projects Completed" },
+              { number: "15+", label: "Years Experience" },
+              { number: "100+", label: "Fleet Vehicles" },
+              { number: "200+", label: "Projects Completed" },
               { number: "24/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index} className="group">
@@ -313,7 +315,7 @@ export default function HomePage() {
               onClick={handleCallNow}
             >
               <Phone className="mr-2 h-5 w-5" />
-              Call Now: +91-9876-543-210
+              Call Now: +91 99160 63439
             </Button>
             <Link href="/contact">
               <Button

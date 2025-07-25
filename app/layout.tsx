@@ -10,7 +10,7 @@ const montserrat = Montserrat({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Vijaya Laxmi Logistics - Heavy Lifting & Transport Solutions",
   description:
-    "Leading crane rental, transport services, and  Rental services provider across India. 20+ years of heavy lifting expertise with 24/7 availability.",
+    "Leading crane rental, transport services, and  Rental services provider across India. 15+ years of heavy lifting expertise with 24/7 availability.",
     generator: 'v0.dev'
 }
 
